@@ -52,7 +52,8 @@ get_download_url() {
   platform="$(get_arch)"
   local cpu
   cpu=$(get_cpu)
-  echo "https://github.com/ccoder83/kubectl/raw/main/v${version}/bin/${platform}/${cpu}/kubectl"
+  #echo "https://github.com/ccoder83/kubectl/raw/main/v${version}/bin/${platform}/${cpu}/kubectl"
+  echo "https://s3.us-west-2.amazonaws.com/amazon-eks/${version}/2023-03-17/bin/${platform}/${cpu}/kubectl"
 }
 
 install_kubectl "$ASDF_INSTALL_TYPE" "$ASDF_INSTALL_VERSION" "$ASDF_INSTALL_PATH"
